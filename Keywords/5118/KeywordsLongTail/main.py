@@ -9,13 +9,13 @@ sys.path.append('..\\')
 from KeywordsLongTail import Long_Tail_Keywords_Parser
 from bs4 import BeautifulSoup
 
-global currentPage
+global currentIndex
 
 #设置爬取的最大网页数
 pageCounts = 33
 
 def loop(url):
-    global currentPage
+    global currentIndex
     currentPageUrl = url + '%d' %currentPage
     print('当前解析：' + currentPageUrl)
     Long_Tail_Keywords_Parser.keywords(currentPageUrl)
@@ -30,9 +30,9 @@ def str_to_hex(s):
 
 with open('keywords.txt', 'r') as f:
     for key in f.readlines():
-        global currentPage
+        global currentIndex
         keywrod = key.replace('\n', '')
         url = 'https://ci.5118.com/%s/?isPager=true&pageIndex=' %str_to_hex(keywrod)
-        currentPage = 1
+        currentIndex = 1
         loop(url)
 
