@@ -12,17 +12,17 @@ from bs4 import BeautifulSoup
 global currentIndex
 
 #设置爬取的最大网页数
-pageCounts = 33
+pageCounts = 10
 
 def loop(url):
     global currentIndex
-    currentPageUrl = url + '%d' %currentPage
+    currentPageUrl = url + '%d' %currentIndex
     print('当前解析：' + currentPageUrl)
     Long_Tail_Keywords_Parser.keywords(currentPageUrl)
 
-    currentPage = (currentPage + 1)
+    currentIndex = (currentIndex + 1)
 
-    if currentPage <= pageCounts:
+    if currentIndex <= pageCounts:
        loop(url)
 
 def str_to_hex(s):
