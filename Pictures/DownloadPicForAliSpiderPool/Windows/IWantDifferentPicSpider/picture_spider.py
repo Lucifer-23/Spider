@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*
 import urllib
 import urllib.request
 
@@ -32,7 +33,7 @@ def pic(url):
             continue
         try: 
             #读取图片到content
-            response = requests.get(link,headers = {
+            response = requests.get('https:' + link,headers = {
                                                    'Pragma': 'no-cache',
                                                    'Accept-Encoding': 'gzip, deflate',
                                                    'Accept-Language': 'zh-CN,zh;q=0.9,ja;q=0.8,en;q=0.7',
@@ -45,12 +46,9 @@ def pic(url):
             print('读取图片 “' + link + '” 内容成功')
             flag = random.randint(0, 1000)
             name = time.strftime('%Y-%m-%d_%H-%M-%S',time.localtime(time.time()))+str(flag)+link[-5:]
-            with open('\\home\\www\\wwwroot\\www.alizhizhuchi.com\\tupian_1'+'\\'+name,'wb') as pp:
+            with open('./'+name,'wb') as pp:
                 pp.write(pic)
                 print('存储图片 “' + link + '” 内容成功，图片名称： ' + name)
-                fp = open(".\\Results\\fileName.txt", "a", encoding="utf-8")
-                fp.write('/tupian_1/' + name)
-                fp.close()
         except Exception as e:
             print(e)
             print('读取图片 “' + link + '” 内容失败')

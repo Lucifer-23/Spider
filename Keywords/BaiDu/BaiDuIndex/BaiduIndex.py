@@ -2,7 +2,6 @@ import requests
 from bs4 import BeautifulSoup
 from urllib.parse import quote
 from random import choice, randint
-from userAgents import agents
 import re
 import json
 import xlwt
@@ -21,7 +20,7 @@ worksheetData.write(0, 2, label='移动搜索指数')
 worksheetData.write(0, 3, label='PC搜索指数')
 i = 1
 
-with open('keywords.txt', 'r') as f:
+with open('website.txt', 'r') as f:
 	for j in f.readlines():
 		keywrod = j.replace('\n', '')
 		url = 'http://index.baidu.com/api/SearchApi/index?word=' + \

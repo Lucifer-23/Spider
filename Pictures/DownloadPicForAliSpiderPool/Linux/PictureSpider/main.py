@@ -6,17 +6,17 @@ from bs4 import BeautifulSoup
 from collections import deque
 
 queue = deque()
-urlcont = 1
+currentIndex = 1
 #入口地址
 #url = 'http://www.wmpic.me/tupian/yijing/'
-url = 'http://www.qqjia.com/face/nanshengtouxiang%d.htm' %urlcont
+url = 'http://www.qqjia.com/face/nanshengtouxiang%d.htm' % currentIndex
 queue.append(url)
 count1 = 0
 #设置爬取的网页数
 url_cont = 40
 
 def loop(url):
-    global urlcont
+    global currentIndex
     print('爬取网页：' + url)
     picture_spider.pic(url)
     urlcont = (urlcont + 1)

@@ -28,7 +28,7 @@ def loop(url):
 def str_to_hex(s):
     return ''.join([hex(ord(c)).replace('0x', '') for c in s])[::-1]
 
-with open('keywords.txt', 'r') as f:
+with open('website.txt', 'r') as f:
     for key in f.readlines():
         global currentIndex
         keywrod = key.replace('\n', '')

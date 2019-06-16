@@ -49,7 +49,7 @@ def pic(url):
             with open('/home/www/wwwroot/www.alizhizhuchi.com/tupian_1'+'/'+name,'wb') as pp:
                 pp.write(pic)
                 print('存储图片 “' + link + '” 内容成功，图片名称： ' + name)
-                fp = open("./JSP/fileName.txt", "a", encoding="utf-8")
+                fp = open("./Results/fileName.txt", "a", encoding="utf-8")
                 fp.write('/tupian_1/' + name)
                 fp.write(u"\n")
                 fp.close()
