@@ -12,7 +12,7 @@ def user_agent(url):
         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
         'Accept-Language': 'zh-CN,zh;q=0.9',
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
-        'Cookie': 'BIDUPSID=4C2E0A21C3F21347ED15DD30B87CCB55; PSTM=1560605283; H_PS_PSSID=1441_21120_29135_29238_28518_29099_29368_28831_29220; BDORZ=B490B5EBF6F3CD402E515D22BCDA1598; BAIDUID=8FE17407A8D60FAE1AD18036C04DE247:FG=1; Hm_lvt_79a0e9c520104773e13ccd072bc956aa=1560605294; bdshare_firstime=1560605293735; Hm_lpvt_79a0e9c520104773e13ccd072bc956aa=%d'+ str(time.time())
+        'Cookie': 'BIDUPSID=4C2E0A21C3F21347ED15DD30B87CCB55; PSTM=1560605283; H_PS_PSSID=1441_21120_29135_29238_28518_29099_29368_28831_29220; BDORZ=B490B5EBF6F3CD402E515D22BCDA1598; BAIDUID=8FE17407A8D60FAE1AD18036C04DE247:FG=1; Hm_lvt_79a0e9c520104773e13ccd072bc956aa=1560605294; bdshare_firstime=1560605293735; Hm_lpvt_79a0e9c520104773e13ccd072bc956aa='+ str(time.time())
     })
     page = urllib.request.urlopen(req,None,req_timeout)
     html = page.read()

@@ -2,9 +2,7 @@ import urllib
 import urllib.request
 
 import time 
-import random 
 from bs4 import BeautifulSoup
-import requests,os
 def user_agent(url):
     req_timeout = 30
     req = urllib.request.Request(url,headers = {
