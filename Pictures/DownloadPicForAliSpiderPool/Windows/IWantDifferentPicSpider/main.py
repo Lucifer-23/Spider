@@ -2,21 +2,24 @@
 import sys
 sys.path.append('../')
 from IWantDifferentPicSpider import picture_spider
-from bs4 import BeautifulSoup
-
-currentIndex = 1
-#入口地址
-url = 'https://www.woyaogexing.com/touxiang/index.html'
+import multiprocessing as mp
 
 #设置爬取的网页数
-maxIndex = 1
+maxIndex = 335
 
-def loop(url):
-    global currentIndex
+def loop(index):
+    url = 'https://www.woyaogexing.com/touxiang/index_%d.html' % index
     print('爬取网页：' + url)
     picture_spider.pic(url)
-    currentIndex = (currentIndex + 1)
-    url = 'https://www.woyaogexing.com/touxiang/index_%d.html' % currentIndex
-    if currentIndex <= maxIndex:
-        loop(url)
-loop(url)
+
+if __name__ == '__main__':
+
+    start_page = 334
+    end_page = maxIndex
+
+    # 多进程抓取
+    pages = [i for i in range(start_page, end_page)]
+    p = mp.Pool()
+    p.map_async(loop, pages)
+    p.close()
+    p.join()

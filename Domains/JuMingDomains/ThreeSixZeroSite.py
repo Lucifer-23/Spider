@@ -12,7 +12,7 @@ def user_agent(url):
         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
         'Accept-Language': 'zh-CN,zh;q=0.9',
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36',
-        'Cookie': 'Cookie: QiHooGUID=456EC7D4986AAEC61D51011B6D98CDB2.1560739547621; __guid=15484592.937033744676420000.1560739548295.6008; webp=1; stc_ls_sohome=RgzW2OYRK4!pTRX4hnM(Wd; __huid=117iwB8UvmJ%2B0Rm1%2BoAeiJzLctrA2wjrx%2FYx9%2F%2FlDiECk%3D; dpr=1; screenw=1; gtHuid=1; WZWS4=0dc0b0cdc087ad2c5779f74e61651207; _S=lvsltf574m0ehsv5dka15i43r2; count='+ str(requestCount)
+        'Cookie': 'QiHooGUID=5890F1A4E8031F2E8EC55E57F7CE747B.1560770770858; _S=rpdttism73rbua32sdqtsll0o6; __guid=15484592.1875221759665618700.1560770767694.5598; webp=1; stc_ls_sohome=RgzW2OYRK4!pTRX4hnM(Wd; __huid=11ST5pSO8AB7S5sMtPTAZ3%2BoPvzth9glqdr9AoCkzUnJY%3D; gtHuid=1; WZWS4=22ce5c1503dcd3508a326d910ce93349; count='+ str(requestCount)
     })
     page = urllib.request.urlopen(req,None,req_timeout)
     html = page.read()

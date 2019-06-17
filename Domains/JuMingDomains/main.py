@@ -14,13 +14,13 @@ from JuMingDomains import ThreeSixZeroSite
 from bs4 import BeautifulSoup
 from globalVar import gloVar
 
-suffix = 'cn'
+suffix = 'com'
 deadline = 90
-price = 100
+price = 60
 items = 500
 page = 1
 url = 'http://www.juming.com/ykj/?api_sou=1&jgpx=0&1=1&ymlx=0&ymhz={0}&dqsj={1}&qian2={2}&meiye={3}&page={4}&_='.format(suffix,deadline,price,items,page) + str(int(time.time()))
-max = 1
+max = 130
 
 def user_agent(url):
     req_timeout = 30
