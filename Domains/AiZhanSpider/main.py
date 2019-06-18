@@ -11,7 +11,7 @@ from bs4 import BeautifulSoup
 import xlwt
 import shutil
 
-max = 1
+max = 10
 
 workbook = xlwt.Workbook()
 sheet_keywords = workbook.add_sheet('keywords')
@@ -104,9 +104,9 @@ def loop(url, index):
 if __name__ == '__main__':
 
    loop('https://www.aizhan.com/bigdata/pcrankup/%d/', 1)
-   #loop('https://www.aizhan.com/bigdata/pcwordup/%d/', 1)
-   #loop('https://www.aizhan.com/bigdata/pcipup/%d/', 1)
-   #loop('https://www.aizhan.com/bigdata/indexup/%d/', 1)
+   loop('https://www.aizhan.com/bigdata/pcwordup/%d/', 1)
+   loop('https://www.aizhan.com/bigdata/pcipup/%d/', 1)
+   loop('https://www.aizhan.com/bigdata/indexup/%d/', 1)
 
    file = time.strftime('AiZhan_Statistics_' + "%Y-%m-%d-%H_%M_%S-", time.localtime()) + '.xlsx'
    workbook.save(file)

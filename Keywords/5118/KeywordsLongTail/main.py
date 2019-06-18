@@ -12,7 +12,7 @@ from bs4 import BeautifulSoup
 global currentIndex
 
 #设置爬取的最大网页数
-pageCounts = 10
+pageCounts = 33
 
 def loop(url):
     global currentIndex
@@ -28,7 +28,7 @@ def loop(url):
 def str_to_hex(s):
     return ''.join([hex(ord(c)).replace('0x', '') for c in s])[::-1]
 
-with open('website.txt', 'r') as f:
+with open('keywords.txt', 'r') as f:
     for key in f.readlines():
         global currentIndex
         keywrod = key.replace('\n', '')
