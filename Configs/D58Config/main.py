@@ -1,5 +1,5 @@
 import os
-results = open("./Results/result.txt", 'a')
+results = open("./Results/config.txt", 'a')
 
 mirror_list = []
 title_list = []
@@ -41,7 +41,7 @@ with open('ours.txt', 'r') as file:
         ours_list.append(item.strip('\n'))
 
 # 7. generate results
-with open('domains.txt', 'r') as file:
+with open('copy.txt', 'r') as file:
     current_index = 0
     for i in file.readlines():
         domain = i.strip('\n')

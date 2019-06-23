@@ -62,5 +62,5 @@ with open('website.txt', 'r') as f:
 			print('')
 			print('')
 
-file = time.strftime('Baidu_Index' + "%Y-%m-%d-%H_%M_%S-", time.localtime()) + area + '-'+ days + '.xlsx'
+file = time.strftime('./Results/Baidu_Index' + "%Y-%m-%d-%H_%M_%S-", time.localtime()) + area + '-'+ days + '.xlsx'
 workbook.save(file)
