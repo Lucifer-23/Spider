@@ -1,0 +1,4 @@
+$site_url="http://AAA";
+$site_title="BBB";
+$target_url="CCC";
+$target_title="DDD";
